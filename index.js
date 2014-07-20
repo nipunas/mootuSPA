@@ -7,9 +7,13 @@ requirejs.config({
     }
 });
 
-//debugger;
 //entry point
-requirejs(['app/main']);
+//requirejs(['app/main']);
+
+define(function(require){
+    var application = require('./app/main');
+    application.initialize();
+});
 
 //(function($) {
 //    var app = $.sammy('#holder', function() {
