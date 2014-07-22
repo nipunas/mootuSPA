@@ -1,9 +1,9 @@
 //configure requirejs
 requirejs.config({
-    baseUrl: 'libs',
+//    baseUrl: 'libs',
     paths: {
-        text : './text',
-        app: '../app'
+        text : './libs/text',
+        app: './app'
     }
 });
 
