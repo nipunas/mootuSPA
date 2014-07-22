@@ -1,38 +1,20 @@
 //configure requirejs
+//baseUrl : Require loads all code relative to baseUrl
+//below config file uses paths config fallback mechanism
+
 requirejs.config({
 //    baseUrl: 'libs',
     paths: {
         text : './libs/text',
-        app: './app'
+        app: './app',
+        jquery: [
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',
+            './libs/jquery'
+        ]
     }
 });
-
-//entry point
-//requirejs(['app/main']);
 
 define(function(require){
     var application = require('./app/main');
     application.initialize();
 });
-
-//(function($) {
-//    var app = $.sammy('#holder', function() {
-//        this.get('#/', function(context){
-//            $('#app-content').empty();
-//        });
-//        
-//        this.get('#/about', function(context){
-//            $('#app-content').empty();
-//            
-//        $.get('./App/Module1/module.html', function(data){
-//            $('#app-content').html(data);
-//        });
-//            
-//        });
-//    });
-//
-//    $(function() {
-//      app.run('#/');
-//    });
-//
-//})(jQuery);
