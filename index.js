@@ -6,14 +6,11 @@ requirejs.config({
 //    baseUrl: 'libs',
     paths: {
         text : './libs/text',
-        app: './app',
-        jquery: [
-            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',
-            './libs/jquery'
-        ]
+        app: './app'
     }
 });
 
+//Entry point
 define(function(require){
     var application = require('./app/main');
     application.initialize();

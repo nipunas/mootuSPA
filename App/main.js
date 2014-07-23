@@ -1,6 +1,7 @@
-define(['./Helper/injector'], function (injector) {
+define(function (require) {
     return {
         initialize: function () {
+            var injector = require('./Helper/injector');
 
             var app = $.sammy('#holder', function () {
                 this.get('#/', function (context) {
